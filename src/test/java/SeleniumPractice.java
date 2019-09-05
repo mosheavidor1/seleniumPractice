@@ -60,10 +60,20 @@ public class SeleniumPractice {
 
         driver.findElement(By.cssSelector("#pass")).sendKeys("SHARK24");
 
-        Thread.sleep(500);
+        Thread.sleep(1000);
         driver.findElement(By.cssSelector("#u_0_a")).submit();
 
-Thread.sleep(30000);
+        Thread.sleep(10000);
+
+        Robot robot = new Robot();
+        robot.mouseMove(500, 170); // move mouse point to specific location
+        robot.delay(1500);        // delay is to make code wait for mentioned milliseconds before executing next step
+        robot.mousePress(InputEvent.BUTTON1_DOWN_MASK); // press left click
+        robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK); // release left click
+        robot.delay(1500);
+
+
+Thread.sleep(10000);
 
 
 
@@ -97,17 +107,39 @@ Thread.sleep(30000);
             public void Test02 () throws InterruptedException, AWTException {
                 driver = new ChromeDriver();
                 driver.manage().window().maximize();
-                driver.get("https://www.ynet.co.il/home/0,7340,L-8,00.html"); // sample url
-                Robot robot = new Robot();
-                robot.mouseMove(630, 420); // move mouse point to specific location
+                driver.get("http://example.com/"); // sample url
+
+
+                                Robot robot = new Robot();
+                robot.mouseMove(500, 500); // move mouse point to specific location
                 robot.delay(1500);        // delay is to make code wait for mentioned milliseconds before executing next step
-                robot.mousePress(InputEvent.BUTTON2_DOWN_MASK); // press left click
-                //robot.mouseRelease(InputEvent.BUTTON2_DOWN_MASK); // release left click
+                robot.mousePress(InputEvent.BUTTON3_DOWN_MASK); // press left click
+                robot.mouseRelease(InputEvent.BUTTON3_DOWN_MASK); // release left click
                 robot.delay(1500);
-                robot.keyPress(KeyEvent.VK_DOWN); // press keyboard arrow key to select Save radio button
-                Thread.sleep(2000);
-                robot.keyPress(KeyEvent.VK_ENTER);
-                // press enter key of keyboard to perform above selected action
+
+                robot.mouseMove(490, 490); // move mouse point to specific location
+                robot.delay(1500);        // delay is to make code wait for mentioned milliseconds before executing next step
+                robot.mousePress(InputEvent.BUTTON1_DOWN_MASK); // press left click
+                robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK); // release left click
+                robot.delay(1500);
+
+
+
+
+
+//                Robot robot = new Robot();
+//                robot.mouseMove(400, 385); // move mouse point to specific location
+//                robot.delay(1500);        // delay is to make code wait for mentioned milliseconds before executing next step
+//                robot.mousePress(InputEvent.BUTTON1_DOWN_MASK); // press left click
+//                robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK); // release left click
+//                robot.delay(1500);
+
+
+
+//                robot.keyPress(KeyEvent.VK_DOWN); // press keyboard arrow key to select Save radio button
+//                Thread.sleep(2000);
+//                robot.keyPress(KeyEvent.VK_ENTER);
+//                // press enter key of keyboard to perform above selected action
 
 
 
@@ -159,6 +191,12 @@ Thread.sleep(30000);
             }
 
         }
+
+
+
+
+
+
 
 
 
